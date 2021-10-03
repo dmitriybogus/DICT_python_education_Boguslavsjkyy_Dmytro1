@@ -3,11 +3,11 @@ a = "Hello! My name is Pybot."
 b = "I was created in 2021."
 print(a + "\n" + b)
 
-# # 2-й этап
-# print("Please remind me your name.")
-# name = input("Введите ваше имя пожалуйста: ")
-# print("What a great name you have, " + name + "!")
-#
+# 2-й этап
+print("Please remind me your name.")
+name = input("Введите ваше имя пожалуйста: ")
+print("What a great name you have, " + name + "!")
+
 # # 3-й этап
 # print("Let me guess your age.")
 # print("Enter remainders of dividing your age by 3, 5 and 7.")
