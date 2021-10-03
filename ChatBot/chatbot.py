@@ -17,15 +17,15 @@ remainder7 = int(input())
 age = (remainder3 * 70 + remainder5 * 21 + remainder7 * 15) % 105
 print("Your age is ", age, ";", " that's a good time to start programming!")
 
-# # 4-й этап
-# print("Now I will prove to you that I can count to any number you want.")
-# i = 0
-# a = int(input(">"))
-# while i <= a:
-#     print(i, "!")
-#     i += 1
-# print("Completed, have a nice day!")
-#
+# 4-й этап
+print("Now I will prove to you that I can count to any number you want.")
+i = 0
+a = int(input(">"))
+while i <= a:
+    print(i, "!")
+    i += 1
+print("Completed, have a nice day!")
+
 # # 5-й этап
 # print("Let's find out if you know English.")
 # english_translate = """
