@@ -8,15 +8,15 @@ print("Please remind me your name.")
 name = input("Введите ваше имя пожалуйста: ")
 print("What a great name you have, " + name + "!")
 
-# # 3-й этап
-# print("Let me guess your age.")
-# print("Enter remainders of dividing your age by 3, 5 and 7.")
-# remainder3 = int(input())
-# remainder5 = int(input())
-# remainder7 = int(input())
-# age = (remainder3 * 70 + remainder5 * 21 + remainder7 * 15) % 105
-# print("Your age is ", age, ";", " that's a good time to start programming!")
-#
+# 3-й этап
+print("Let me guess your age.")
+print("Enter remainders of dividing your age by 3, 5 and 7.")
+remainder3 = int(input())
+remainder5 = int(input())
+remainder7 = int(input())
+age = (remainder3 * 70 + remainder5 * 21 + remainder7 * 15) % 105
+print("Your age is ", age, ";", " that's a good time to start programming!")
+
 # # 4-й этап
 # print("Now I will prove to you that I can count to any number you want.")
 # i = 0
