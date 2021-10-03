@@ -57,7 +57,7 @@ while True:
                 ⠄⠄⠄⠄⠄⠄⠄⣿⣿⣿⢸⣿⣿⣿⠸⣿⡇⣿⣿⡆⣼⣿⣿⣿⡇⣿⣿⡇
                 ⠄⠄⠄⠄⠄⠄⠄⠘⣿⣿⡘⣿⣿⣷⢀⣿⣷⣿⣿⡿⠿⢿⣿⣿⡇⣩⣿⡇
                 ⠄⠄⠄⠄⠄⠄⠄⠄⠄⢻⣷⠙⠛⠋⣿⣿⣿⣿⣿⣷⣶⣿⣿⣿⡇⣿⣿⡇
-                ///!!!CONGRADULATIONS!!!///
+                ///!!!CONGRATULATIONS!!!///
                 """)
         print("Completed, have a nice day!")
         break
