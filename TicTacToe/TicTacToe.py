@@ -100,7 +100,6 @@ def game():
                 print("You should enter numbers!")
                 return game()
             else:
-                print("This cell is occupied! Choose another one!")
                 return game()
 
 
@@ -111,71 +110,50 @@ while True:
     elif coord[0] == 'O' and coord[1] == 'O' and coord[2] == 'O':
         print('O wins')
         break
-    elif coord[0] == 'X' and coord[3] == 'X' and coord[6] == 'X':
+    if coord[3] == 'X' and coord[4] == 'X' and coord[5] == 'X':
+        print('X wins')
+        break
+    elif coord[3] == 'O' and coord[4] == 'O' and coord[5] == 'O':
+        print('O wins')
+        break
+    if coord[6] == 'X' and coord[7] == 'X' and coord[8] == 'X':
+        print('X wins')
+        break
+    elif coord[6] == 'O' and coord[7] == 'O' and coord[8] == 'O':
+        print('O wins')
+        break
+    if coord[0] == 'X' and coord[3] == 'X' and coord[6] == 'X':
         print('X wins')
         break
     elif coord[0] == 'O' and coord[3] == 'O' and coord[6] == 'O':
         print('O wins')
         break
-    elif coord[1] == 'X' and coord[4] == 'X' and coord[7] == 'X':
+    if coord[1] == 'X' and coord[4] == 'X' and coord[7] == 'X':
         print('X wins')
         break
     elif coord[1] == 'O' and coord[4] == 'O' and coord[7] == 'O':
         print('O wins')
         break
-    elif coord[2] == 'X' and coord[5] == 'X' and coord[8] == 'X':
+    if coord[2] == 'X' and coord[5] == 'X' and coord[8] == 'X':
         print('X wins')
         break
     elif coord[2] == 'O' and coord[5] == 'O' and coord[8] == 'O':
         print('O wins')
         break
-    elif coord[0] == 'X' and coord[4] == 'X' and coord[8] == 'X':
+    if coord[0] == 'X' and coord[4] == 'X' and coord[8] == 'X':
         print('X wins')
         break
     elif coord[0] == 'O' and coord[4] == 'O' and coord[8] == 'O':
         print('O wins')
         break
-    elif coord[6] == 'X' and coord[4] == 'X' and coord[2] == 'X':
+    if coord[2] == 'X' and coord[4] == 'X' and coord[6] == 'X':
         print('X wins')
         break
-    elif coord[6] == 'O' and coord[4] == 'O' and coord[2] == 'O':
+    elif coord[2] == 'O' and coord[4] == 'O' and coord[6] == 'O':
         print('O wins')
         break
-    elif coord[0] == 'X' and coord[1] == 'O' and coord[2] == 'X' and coord[3] == 'O' and coord[4] == 'O' and coord[
-        5] == 'X' and coord[6] == 'X' and coord[7] == 'X' and coord[8] == 'O':
-        print('Draw')
+    if " " not in coord:
+        print("Drew")
         break
-    elif coord[0] == 'O' and coord[1] == 'X' and coord[2] == 'O' and coord[3] == 'X' and coord[4] == 'X' and coord[
-        5] == 'O' and coord[6] == 'O' and coord[7] == 'O' and coord[8] == 'X':
-        print('Draw')
-        break
-    elif coord[0] == 'O' and coord[1] == 'X' and coord[2] == 'O' and coord[3] == 'O' and coord[4] == 'X' and coord[
-        5] == 'O' and coord[6] == 'X' and coord[7] == 'O' and coord[8] == 'X':
-        print('Draw')
-        break
-    elif coord[0] == 'X' and coord[1] == 'O' and coord[2] == 'X' and coord[3] == 'O' and coord[4] == 'O' and coord[
-        5] == 'X' and coord[6] == 'O' and coord[7] == 'X' and coord[8] == 'O':
-        print('Draw')
-        break
-    elif coord[0] == 'O' and coord[1] == 'X' and coord[2] == 'O' and coord[3] == 'X' and coord[4] == 'O' and coord[
-        5] == 'O' and coord[6] == 'X' and coord[7] == 'O' and coord[8] == 'X':
-        print('Draw')
-        break
-    elif coord[0] == 'X' and coord[1] == 'O' and coord[2] == 'X' and coord[3] == 'O' and coord[4] == 'X' and coord[
-        5] == 'O' and coord[6] == 'O' and coord[7] == 'X' and coord[8] == 'O':
-        print('Draw')
-        break
-    if coord == 'XOOOXOXXO':
-        print('O wins')
-    elif coord == 'XOXOOXXXO':
-        print('Draw')
-    elif coord == 'XO_OOX_X_':
-        print('Game not finished')
-    elif coord == 'XO_XO_XOX':
-        print('Impossible')
-    elif coord == '_O_X__X_X':
-        print('Impossible')
-    elif coord == '_OOOO_X_X':
-        print('Impossible')
     else:
         game()
