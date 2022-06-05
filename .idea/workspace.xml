@@ -1,7 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="e8745530-e43e-4d40-a2af-813c6430d3ba" name="Changes" comment="" />
+    <list default="true" id="e8745530-e43e-4d40-a2af-813c6430d3ba" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/dominoes/dominoes.py" beforeDir="false" afterPath="$PROJECT_DIR$/dominoes/dominoes.py" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
