@@ -2,7 +2,7 @@ from random import sample
 
 
 class Dominoes:
-    def init(self):
+    def __init__(self):
         self.game_dice = [[a, b] for a in range(7) for b in range(a, 7)]
         self.player_pieces = None
         self.computer_pieces = None
