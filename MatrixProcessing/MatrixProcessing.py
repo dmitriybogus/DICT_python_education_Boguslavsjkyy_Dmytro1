@@ -16,7 +16,7 @@ Your choice: > """, ("1", "2", "3", "0"))
         elif choice == "2":
             self.multiplication_by_constant()
         elif choice == "3":
-            ...
+            self.multiply_matrices()
         elif choice == "0":
             return
 
@@ -25,6 +25,38 @@ Your choice: > """, ("1", "2", "3", "0"))
             self.menu()
         else:
             return
+
+    def multiply_matrices(self):
+        matrix1, rows1, columns1 = self.create_matrix(" first ")
+        matrix2, rows2, columns2 = self.create_matrix(" second ")
+        while rows1 != columns2:
+            print("The number of columns"
+                  " of the first matrix must"
+                  " be equal to the number of rows of"
+                  " the second matrix")
+            matrix2, rows2, columns2 = self.create_matrix(" second ")
+        result = []
+        for i in range(rows1):
+            row = []
+            for j in range(columns2):
+                num = 0
+                for k in range(columns1):
+                    num += matrix1[i][k] * matrix2[k][j]
+                row.append(num)
+            result.append(row)
+        self.show_result(result)
+
+    def create_matrix(self, turn=" "):
+        rows, columns = self.correct_input_size(f"Enter size of{turn}matrix: > ")
+        matrix = self.correct_input_matrix(rows, columns)
+        return matrix, rows, columns
+
+    def correct_input_matrix(self, rows, columns):
+        matrix = []
+        for i in range(1, rows + 1):
+            row = self.correct_input_columns(f"Row number {i}: > ", columns)
+            matrix.append(row)
+        return matrix
 
     def multiplication_by_constant(self):
         constant = self.correct_integer_input("Enter constant: > ")
@@ -54,17 +86,6 @@ Your choice: > """, ("1", "2", "3", "0"))
             result.append(column)
         self.show_result(result)
 
-    def create_matrix(self, turn=" "):
-        rows, columns = self.correct_input_size(f"Enter size of{turn}matrix: > ")
-        matrix = self.correct_input_matrix(rows, columns)
-        return matrix, rows, columns
-
-    def correct_input_matrix(self, rows, columns):
-        matrix = []
-        for i in range(1, rows + 1):
-            row = self.correct_input_columns(f"Row number {i}: > ", columns)
-            matrix.append(row)
-        return matrix
 
     @staticmethod
     def correct_integer_input(string):
