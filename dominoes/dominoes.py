@@ -2,7 +2,7 @@ from random import sample
 
 
 class Dominoes:
-    def init(self):
+    def __init__(self):
         self.game_dice = [[a, b] for a in range(7) for b in range(a, 7)]
         self.player_pieces = None
         self.computer_pieces = None
@@ -98,7 +98,9 @@ Player pieces: {self.player_pieces}
 
 Domino snake: {self.domino_snake[:17] if len(self.domino_snake) >= 16 else self.domino_snake}
               {self.domino_snake[17:] if len(self.domino_snake) > 16 else ""}              
-Status: {self.status}""")def domino_interface(self):
+Status: {self.status}""")
+
+    def domino_interface(self):
         print(f"""{"=" * 70}
 Stock size: {len(self.stock_pieces)}
 Computer pieces: {len(self.computer_pieces)}
@@ -212,7 +214,9 @@ Computer pieces: {len(self.computer_pieces)}
 
     def step_1(self):
         self.init_game()
-        self.show_filed()def step_2(self):
+        self.show_filed()
+
+    def step_2(self):
         self.init_game()
         self.domino_interface()
 
