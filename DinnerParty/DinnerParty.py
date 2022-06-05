@@ -1,3 +1,5 @@
+import random
+
 invalid_symbols = ".,/';[]}{!~`@#$%^&*-_№?+= "
 
 
@@ -10,6 +12,23 @@ def step2():
     friends_list = add_friends_list()
     discount_for = split_bill_equally(len(friends_list))
     print(create_dict(friends_list, discount_for))
+
+
+def step3():
+    friends_list = add_friends_list()
+    add_feature_lucky(friends_list)
+
+
+def add_feature_lucky(friends):
+    selected = correctly_input_command("Do you want to use the"
+                                       " \"Who is lucky?\" feature? Write Yes/No: > ", ("yes", "no"))
+
+    if selected == "no":
+        lucky = None
+        print("No one is going to be lucky")
+    else:
+        lucky = selecting_lucky(friends)
+    return lucky
 
 
 def correct_integer_input(string):
@@ -81,5 +100,20 @@ def correct_input_name(invited_friends):
     return friend
 
 
+def correctly_input_command(string, command):
+    user_input = input(string)
+    while user_input not in command:
+        print("please input correctly command")
+        user_input = input(string)
+    return user_input
+
+
+def selecting_lucky(friends):
+    random_friend = random.choice(friends)
+    print(f"{random_friend} is the lucky one!")
+    return random_friend
+
+
 # step1()
-step2()
+# step2()
+step3()
