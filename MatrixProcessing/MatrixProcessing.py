@@ -7,8 +7,9 @@ class MatrixProcessing:
         choice = self.correctly_input_command("""1. Add matrices
 2. Multiply matrix by a constant
 3. Multiply matrices
+4. Transpose matrix
 0. Exit
-Your choice: > """, ("1", "2", "3", "0"))
+Your choice: > """, ("1", "2", "3", "4", "0"))
 
 
         if choice == "1":
@@ -17,6 +18,8 @@ Your choice: > """, ("1", "2", "3", "0"))
             self.multiplication_by_constant()
         elif choice == "3":
             self.multiply_matrices()
+        elif choice == "4":
+            self.matrix_transposition()
         elif choice == "0":
             return
 
@@ -25,6 +28,16 @@ Your choice: > """, ("1", "2", "3", "0"))
             self.menu()
         else:
             return
+
+    def matrix_transposition(self):
+        matrix, *_ = self.create_matrix()
+        result = []
+        for i in range(len(matrix[0])):
+            rows = []
+            for row in matrix:
+                rows.append(row[i])
+            result.append(rows)
+        self.show_result(result)
 
     def multiply_matrices(self):
         matrix1, rows1, columns1 = self.create_matrix(" first ")
